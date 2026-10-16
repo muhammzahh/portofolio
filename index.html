@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nama Kamu — Mobile Developer</title>
+  <meta name="description" content="Portofolio Nama Kamu, Mobile Developer (Android, iOS, Flutter)." />
+  <meta name="theme-color" content="#0f1115" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="nav">
+    <a href="#home" class="nav__logo">&lt;<span>.</span>/&gt;</a>
+
+    <nav class="nav__menu" id="navMenu" aria-label="Navigasi utama">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Ganti tema">◐</button>
+      <button class="icon-btn nav__burger" id="burger" aria-label="Buka menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero container">
+      <div class="hero__text">
+        <p class="eyebrow">Hello, i'am</p>
+        <h1>Muhammad Hamzah<br /><span class="grad"></span></h1>
+        <p class="hero__desc">
+          I build modern, responsive, and user-friendly websites and applications. 
+          Passionate about creating digital solutions that combine functionality, 
+          performance, and clean design.
+           
+        </p>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary">view project</a>
+        </div>
+      </div>
+
+      <!-- Interactive Flexible Lanyard ID Card (Dipindahkan ke Halaman Pertama) -->
+      <div class="hero__visual">
+        <div class="lanyard-wrapper" id="lanyardWrapper">
+          <!-- Dynamic SVG Ribbon that bends and stretches in real-time -->
+          <svg class="lanyard-svg" id="lanyardSvg" aria-hidden="true">
+            <defs>
+              <linearGradient id="strapGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#121722" />
+                <stop offset="25%" stop-color="#1b2332" />
+                <stop offset="75%" stop-color="#1b2332" />
+                <stop offset="100%" stop-color="#121722" />
+              </linearGradient>
+              <filter id="strapGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.6" />
+              </filter>
+            </defs>
+            <path id="lanyardStrapBody" class="lanyard-strap-body" fill="url(#strapGrad)" filter="url(#strapGlow)" />
+            <path id="lanyardStrapBorderL" class="lanyard-strap-border" stroke="var(--accent)" stroke-width="2" fill="none" />
+            <path id="lanyardStrapBorderR" class="lanyard-strap-border" stroke="var(--accent)" stroke-width="2" fill="none" />
+            <path id="lanyardStrapCenter" class="lanyard-strap-center" stroke="rgba(61, 220, 151, 0.35)" stroke-width="1.5" stroke-dasharray="4,4" fill="none" />
+          </svg>
+
+          <!-- Top anchor bracket where the strap hangs from -->
+          <div class="lanyard-top-mount" id="lanyardMount" aria-hidden="true"></div>
+
+          <!-- The Hanging Card Badge with metal clasp attached -->
+          <div class="lanyard-card" id="lanyardCard" role="region" aria-label="ID Card Lanyard Muhammad Burhannudin Hamzah">
+            <!-- Hardware clasp/clip attached at the top of the card -->
+            <div class="lanyard-hardware" id="lanyardHardware" aria-hidden="true">
+              <div class="lanyard-ring" id="lanyardRing"></div>
+              <div class="lanyard-clip"></div>
+            </div>
+            <div class="lanyard-card__hole"></div>
+            <div class="lanyard-card__sheen" id="lanyardSheen"></div>
+            <div class="lanyard-card__body">
+              <div class="lanyard-card__header">
+                
+                
+              </div>
+              <div class="lanyard-card__photo">
+                <img src="assets/img/profile.png" alt="Foto Muhammad Burhannudin Hamzah" />
+              </div>
+              <div class="lanyard-card__details">
+                <h3>Muhammad Hamzah</h3>
+                <p>Frontend & App Developer</p>
+              </div>
+              <div class="lanyard-card__footer">
+                <div class="lanyard-card__barcode" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="lanyard-card__chip" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container reveal">
+      <h2 class="section__title"><span>01.</span> About Me</h2>
+      <div class="about">
+        <div class="about__text">
+          <p>
+            I am a passionate Web & App Developer with an interest in designing applications and building responsive, user-friendly interfaces.
+             I enjoy turning ideas into functional digital experiences through thoughtful design and clean, efficient code.
+My focus is on frontend development and application design, combining creativity and technology to create intuitive interfaces that deliver a seamless user experience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section container reveal">
+      <h2 class="section__title"><span>02.</span> Skills</h2>
+      <div class="skills">
+        <div class="skills__group">
+          <h3>Bahasa</h3>
+          <div class="chips">
+            <div class="chips__row">
+              <span><img src="assets/img/html.png" alt="HTML" />HTML</span>
+              <span><img src="assets/img/css.png" alt="CSS" />CSS</span>
+            </div>
+            <div class="chips__row">
+              <span><img src="assets/img/javascript.png" alt="JavaScript" />JavaScript</span>
+              <span><img src="assets/img/dart.png" alt="Dart" />Dart</span>
+            </div>
+          </div>
+        </div>
+        <div class="skills__group">
+          <h3>Framework</h3>
+          <div class="chips">
+            <div class="chips__row">
+              <span><img src="assets/img/flutter.png" alt="Flutter" />Flutter</span>
+            </div>
+          </div>
+        </div>
+        <div class="skills__group">
+          <h3>Tools</h3>
+          <div class="chips">
+            <div class="chips__row">
+              <span><img src="assets/img/github.png" alt="GitHub" />GitHub</span>
+              <span><img src="assets/img/figma.png" alt="Figma" />Figma</span>
+            </div>
+            <div class="chips__row">
+              <span><img src="assets/img/android-studio.png" alt="Android Studio" />Android Studio</span>
+              <span><img src="assets/img/vscode.png" alt="VS Code" />VS Code</span>
+            </div>
+            <div class="chips__row">
+              <span><img src="assets/img/postman.png" alt="Postman" />Postman</span>
+              <span><img src="assets/img/notion.png" alt="Notion" />Notion</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container reveal">
+      <h2 class="section__title"><span>03.</span> Project</h2>
+
+      <div class="filters" id="filters">
+      </div>
+
+      <div class="projects" id="projectGrid">
+        <!-- Tambah/ubah proyek di sini. Salin satu <article> sebagai template. -->
+        <article class="project" data-category="website">
+          <div class="project__thumb">
+            <img src="assets/img/kuisku.png" alt="Kuisku - Platform Latihan Soal & Kuis Sekolah Interaktif" />
+          </div>
+          <div class="project__body">
+            <h3>Kuisku</h3>
+            <p>Interactive School Practice Platform — National curriculum-based learning (for elementary, junior high, and high school levels)
+               covering 24 subjects, complete with practice modes,
+               timers, answer evaluations, 3D flashcards, and in-depth explanations.</p>
+            <div class="chips chips--sm"><span>Website</span><span>Educational</span><span>Vanilla JS</span><span>Vercel</span></div>
+            <div class="project__links">
+              <a href="https://kuisku-ten.vercel.app/" target="_blank" rel="noopener">Visit Website ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="website">
+          <div class="project__thumb">
+            <img src="assets/img/noir-coffee.png" alt="NOIR Coffee - Artisanal Coffee Experience" />
+          </div>
+          <div class="project__body">
+            <h3>NOIR Coffee</h3>
+            <p>Artisanal Coffee &amp; Ordering Platform — Modern coffee shop experience with a choice of Arabica coffee beans, interactive shopping cart system, The Ritual brewing guide, and elegant editorial design.</p>
+            <div class="chips chips--sm"><span>Website</span><span>E-Commerce</span><span>Interactive UI</span><span>Vercel</span></div>
+            <div class="project__links">
+              <a href="https://noircofee.vercel.app/" target="_blank" rel="noopener">Visit Website ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-category="website">
+          <div class="project__thumb">
+            <img src="assets/img/rasa-nusantara.png" alt="Rasa Nusantara - Atlas Kuliner Indonesia" />
+          </div>
+          <div class="project__body">
+            <h3>Rasa Nusantara</h3>
+            <p>Indonesian Culinary Atlas — A platform for exploring the archipelago’s gastronomy, from Sabang to Merauke, featuring an interactive map and recipes for signature dishes.</p>
+            <div class="chips chips--sm"><span>Website</span><span>Interactive Map</span><span>Vercel</span></div>
+            <div class="project__links">
+              <a href="https://nusantarafood.vercel.app/" target="_blank" rel="noopener">Visit Website ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section container reveal">
+      <h2 class="section__title"><span>04.</span> Experience &amp; Education</h2>
+      <ol class="timeline">
+        <li>
+          <span class="timeline__date"></span>
+          <h3>UI/UX Design</h3>
+          <p>Designed e-commerce applications for furniture using Figma.</p>
+        </li>
+        <li>
+          <span class="timeline__date"></span>
+          <h3>Application Development</h3>
+          <p>Developed a waste bank application using Flutter and connected it to a backend using Postman.</p>
+        </li>
+        <li>
+          <span class="timeline__date"></span>
+          <h3>Application Development</h3>
+          <p>Developed a PDAM application together with the UI/UX team.</p>
+        </li>
+        <li>
+          <span class="timeline__date">2024-Now</span>
+          <h3>SMK Telkom Malang - Software Engineering</h3>
+          <p>Studying programming, databases, and mobile and web application development.</p>
+        </li>
+        
+      </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container reveal">
+      <h2 class="section__title"><span>05.</span> Contact</h2>
+      <div class="contact">
+        <div class="contact__info">
+          <p>Have a project, a job offer, or just want to chat? Send me a message, and I'll do my best to reply as soon as possible.</p>
+          <ul>
+            <li>✉️ <a href="mailto:muhhammzahh@gmail.com">muhhammzahh@gmail.com</a></li>
+            <li><img src="assets/img/github.png" alt="GitHub" class="contact__icon" /> <a href="https://github.com/muhammzahh" target="_blank" rel="noopener">github.com/muhammzahh</a></li>
+            <li>📞 <a href="https://wa.me/6282331859477" target="_blank" rel="noopener">+62 82331859477</a></li>
+          </ul>
+          <div class="contact__actions">
+            <a href="https://wa.me/6282331859477" target="_blank" rel="noopener" class="btn btn--ghost">💬 WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- HOLOGRAPHIC RETRO ARCADE MINIGAME -->
+        <div class="holo-game" id="holoGame">
+          <div class="holo-game__frame" id="gameFrame">
+            <!-- Top HUD Bar -->
+            <div class="holo-game__hud">
+              <div class="holo-game__badge">
+                <span class="holo-game__dot"></span>
+                <span>HOLO-DEFENDER // ARCADE</span>
+              </div>
+              <div class="holo-game__stats">
+                <span class="stat-score">SCORE: <strong id="gameScore">0</strong></span>
+                <span class="stat-high">HI: <strong id="gameHighScore">0</strong></span>
+              </div>
+            </div>
+
+            <!-- Lives / Shield Bar & Wave Info -->
+            <div class="holo-game__status-bar">
+              <div class="holo-game__shield">
+                <span class="shield-label">SHIELD:</span>
+                <div class="shield-bars" id="shieldBars">
+                  <span class="bar is-active"></span>
+                  <span class="bar is-active"></span>
+                  <span class="bar is-active"></span>
+                </div>
+              </div>
+              <div class="holo-game__wave" id="gameWave">WAVE 1</div>
+            </div>
+
+            <!-- Game Canvas Stage -->
+            <div class="holo-game__stage" id="gameStage">
+              <canvas class="holo-game__canvas" id="gameCanvas"></canvas>
+              
+              <!-- Scanlines & Sci-Fi Corner Brackets -->
+              <div class="holo-game__scanlines"></div>
+              <div class="holo-game__corners">
+                <span class="corner tl"></span>
+                <span class="corner tr"></span>
+                <span class="corner bl"></span>
+                <span class="corner br"></span>
+              </div>
+
+              <!-- Overlay Screen (Start / Game Over) -->
+              <div class="holo-game__overlay" id="gameOverlay">
+                <div class="overlay__content">
+                  <h3 class="overlay__title" id="overlayTitle">⚡ HOLO DEFENDER ⚡</h3>
+                  <p class="overlay__desc" id="overlayDesc">Gerakkan kursor / sentuh layar untuk mengendalikan pesawat!</p>
+                  <button type="button" class="btn btn--primary overlay__btn" id="btnPlayGame">▶ START GAME</button>
+                  <div class="overlay__tips">Desktop: Mouse / Arrow Keys | Mobile: Sentuh &amp; Geser</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hologram Pedestal Base -->
+            <div class="holo-game__pedestal">
+              <div class="pedestal__emitter">
+                <span class="emitter__ring r1"></span>
+                <span class="emitter__ring r2"></span>
+                <span class="emitter__core"></span>
+              </div>
+            </div>
+
+            <!-- Bottom Arcade Controls -->
+            <div class="holo-game__controls">
+              <button type="button" class="holo-btn holo-btn--atk" id="btnEmpBlast" title="Lepaskan EMP Blast (Membersihkan Layar)">
+                <span class="btn__icon">💥</span>
+                <span class="btn__label">EMP SHOCKWAVE</span>
+              </button>
+              <button type="button" class="holo-btn" id="btnRestartGame" title="Ulang Permainan">
+                <span class="btn__icon">🔄</span>
+                <span class="btn__label">RETRY</span>
+              </button>
+              <button type="button" class="holo-btn holo-btn--sound" id="btnGameSound" title="Aktifkan Suara Game">
+                <span class="btn__icon" id="soundIcon">🔇</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Nama Kamu. Dibuat dengan HTML, CSS &amp; JavaScript.</p>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas">↑</button>
+
+  <!-- CHATBOT WIDGET -->
+  <div class="chatbot" id="chatbot">
+    <button class="chatbot__toggle" id="chatbotToggle" aria-label="Buka asisten chat" aria-expanded="false">
+      <span class="chatbot__icon-open">💬</span>
+      <span class="chatbot__icon-close">✕</span>
+    </button>
+
+    <div class="chatbot__window" id="chatbotWindow" aria-hidden="true">
+      <div class="chatbot__header">
+        <div class="chatbot__header-info">
+          <div class="chatbot__avatar">🤖</div>
+          <div>
+            <strong>Asisten Burhanudin</strong>
+            <span class="chatbot__status"><span class="chatbot__dot"></span> Online</span>
+          </div>
+        </div>
+        <button class="chatbot__close" id="chatbotClose" aria-label="Tutup chat">✕</button>
+      </div>
+
+      <div class="chatbot__messages" id="chatbotMessages"></div>
+
+      <div class="chatbot__quick" id="chatbotQuick">
+        <button type="button" data-q="Siapa hamzah?">👋 Tentang</button>
+        <button type="button" data-q="Apa saja skill & teknologi yang dikuasai?">💻 Skill</button>
+        <button type="button" data-q="Proyek apa saja yang pernah dibuat?">🚀 Proyek</button>
+        <button type="button" data-q="Bagaimana cara menghubungi via WhatsApp / Email?">📞 Kontak</button>
+      </div>
+
+      <form class="chatbot__form" id="chatbotForm">
+        <input type="text" id="chatbotInput" placeholder="Tanya sesuatu..." autocomplete="off" required />
+        <button type="submit" aria-label="Kirim">➤</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
